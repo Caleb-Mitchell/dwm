@@ -21,8 +21,9 @@ static const char col_black[]        = "#000000";
 static const char col_wallpaper_bg[]= "#393939";
 static const char col_white[]       = "#000000";
 /* static const unsigned int baralpha = 0xd0; */
-static const unsigned int baralpha = 0xd0;
-static const unsigned int borderalpha = OPAQUE;
+static const unsigned int baralpha = 0x00;
+/* static const unsigned int borderalpha = OPAQUE; */
+static const unsigned int borderalpha = 0x00;
 static const char *colors[][3]      = {
 	/*               fg         bg         border   */
 /*	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, */
