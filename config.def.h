@@ -20,6 +20,7 @@ static const char col_cyan[]        = "#005577";
 static const char col_black[]        = "#000000";
 static const char col_wallpaper_bg[]= "#393939";
 static const char col_white[]       = "#FFFFFF";
+static const char col_gruvyel[]     = "#D59720";
 /* static const unsigned int baralpha = 0xd0; */
 static const unsigned int baralpha = 0x00;
 /* static const unsigned int borderalpha = OPAQUE; */
@@ -31,7 +32,7 @@ static const char *colors[][3]      = {
 	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
 /*	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  }, */
 
-	[SchemeSel]  = { col_gray4, col_wallpaper_bg,  col_white  },
+	[SchemeSel]  = { col_gray4, col_gruvyel,  col_gruvyel  },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
