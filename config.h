@@ -91,9 +91,11 @@ static const char *termcmd[]  = { "st", NULL };
 static const char *qutecmd[] = { "qutebrowser", NULL };
 static const char *plexcmd[] = { "/home/caleb/Programs/Plexamp-3.5.0.AppImage", NULL };
 static const char *alsacmd[] = { "st", "-e", "alsamixer", NULL };
+static const char *discordcmd[] = { "discord", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,  											XK_c,      spawn,          {.v = discordcmd } },
 	{ MODKEY,                       XK_a,      spawn,          {.v = alsacmd } },
 	{ MODKEY,                       XK_x,      spawn,          {.v = plexcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
