@@ -54,7 +54,7 @@ static const Rule rules[] = {
 	{ "qutebrowser", NULL,     NULL,       1 << 1,            0,           0  },
 	{ "discord",   NULL,     NULL,       1 << 2,            0,           0  },
 	{ "Plexamp",  NULL,      NULL,       1 << 3,         0,           0     },
-	{ "anki",     NULL,      NULL,       1 << 4,        0,            0 },
+	{ "Anki",     NULL,      NULL,       1 << 4,        0,            0 },
 };
 
 /* layout(s) */
