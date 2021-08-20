@@ -16,6 +16,7 @@ static const char col_gray1[]       = "#222222";
 static const char col_gray2[]       = "#444444";
 static const char col_gray3[]       = "#bbbbbb";
 static const char col_gray4[]       = "#eeeeee";
+static const char col_gray5[]       = "#ffffff";
 static const char col_cyan[]        = "#005577";
 static const char col_black[]       = "#000000";
 static const char col_wallpaper_bg[]= "#393939";
@@ -30,7 +31,7 @@ static const char *colors[][3]      = {
 /*	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, */
 	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
 /*	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  }, */
-	[SchemeSel]  = { col_gray4, col_gruvyel,  col_gruvyel  },
+	[SchemeSel]  = { col_black, col_gruvyel,  col_gruvyel  },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -81,7 +82,8 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+// static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_gray3, "-sb", col_gruvyel, "-sf", col_black, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *qutecmd[] = { "qutebrowser", NULL };
 
