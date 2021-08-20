@@ -53,6 +53,7 @@ static const Rule rules[] = {
 	{ "Firefox",  NULL,       NULL,       1 << 8,       0,           -1 },
 	{ "qutebrowser", NULL,     NULL,       1 << 1,            0,           0  },
 	{ "discord",   NULL,     NULL,       1 << 2,            0,           0  },
+	{ "Plexamp",  NULL,      NULL,       1 << 3,         0,           0     },
 };
 
 /* layout(s) */
@@ -88,9 +89,11 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_black, "-nf", col_gray3, "-sb", col_gruvyel, "-sf", col_black, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *qutecmd[] = { "qutebrowser", NULL };
+static const char *plexcmd[] = { "/home/caleb/Programs/Plexamp-3.5.0.AppImage", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY,                       XK_x,      spawn,          {.v = plexcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
 	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
 	{ MODKEY,                       XK_q,      spawn,          {.v = qutecmd } },
