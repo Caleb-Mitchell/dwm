@@ -22,6 +22,7 @@ static const char col_black[]       = "#000000";
 static const char col_wallpaper_bg[]= "#393939";
 static const char col_white[]       = "#FFFFFF";
 static const char col_gruvyel[]     = "#D59720";
+static const char col_gruvgreen[]   = "#669A68";
 /* static const unsigned int baralpha = 0xd0; */
 static const unsigned int baralpha = 0x00;
 /* static const unsigned int borderalpha = OPAQUE; */
@@ -31,7 +32,7 @@ static const char *colors[][3]      = {
 /*	[SchemeNorm] = { col_gray3, col_gray1, col_gray2 }, */
 	[SchemeNorm] = { col_gray3, col_black, col_gray2 },
 /*	[SchemeSel]  = { col_gray4, col_cyan,  col_cyan  }, */
-	[SchemeSel]  = { col_wallpaper_bg, col_gruvyel,  col_gruvyel  },
+	[SchemeSel]  = { col_wallpaper_bg, col_gruvgreen,  col_gruvgreen  },
 };
 static const unsigned int alphas[][3]      = {
 	/*               fg      bg        border     */
@@ -87,7 +88,7 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() */
 // static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
-static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_wallpaper_bg, "-nf", col_gray3, "-sb", col_gruvyel, "-sf", col_black, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_wallpaper_bg, "-nf", col_gray3, "-sb", col_gruvgreen, "-sf", col_black, NULL };
 static const char *termcmd[]  = { "st", NULL };
 static const char *qutecmd[] = { "qutebrowser", NULL };
 static const char *plexcmd[] = { "/home/caleb/Programs/Plexamp-3.5.0.AppImage", NULL };
