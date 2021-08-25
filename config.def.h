@@ -56,6 +56,7 @@ static const Rule rules[] = {
 	{ "discord",     NULL,      NULL,       1 << 2,        0,           0 },
 	{ "Plexamp",     NULL,      NULL,       1 << 3,        0,           0 },
 	{ "Anki",        NULL,      NULL,       1 << 4,        0,           0 },
+	{ "Bitwarden",   NULL,      NULL,       0,             1,           0 },
 };
 
 /* layout(s) */
@@ -95,9 +96,11 @@ static const char *plexcmd[] = { "/home/caleb/Programs/Plexamp-3.5.0.AppImage", 
 static const char *alsacmd[] = { "st", "-e", "alsamixer", NULL };
 static const char *discordcmd[] = { "discord", NULL };
 static const char *ankicmd[] = { "anki", NULL };
+static const char *bitwardencmd[] = { "bitwarden-desktop", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
+	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = bitwardencmd } },
 	{ MODKEY,                       XK_n,      spawn,          {.v = ankicmd } },
 	{ MODKEY,  											XK_c,      spawn,          {.v = discordcmd } },
 	{ MODKEY,                       XK_a,      spawn,          {.v = alsacmd } },
