@@ -42,7 +42,8 @@ static const unsigned int alphas[][3]      = {
 
 /* tagging */
 // static const char *tags[] = { "I", "II", "III", "IV", "V" };
-static const char *tags[] = { "", "", "ﭮ", "﮸", "呂" };
+// static const char *tags[] = { "", "", "ﭮ", "﮸", "呂" };
+static const char *tags[] = { "", "", "", "", "" };
 
 static const Rule rules[] = {
 	/* xprop(1):
