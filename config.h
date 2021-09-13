@@ -91,23 +91,10 @@ static char dmenumon[2] = "0"; /* component of dmenucmd, manipulated in spawn() 
 // static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_gray1, "-nf", col_gray3, "-sb", col_cyan, "-sf", col_gray4, NULL };
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, "-fn", dmenufont, "-nb", col_wallpaper_bg, "-nf", col_gray3, "-sb", col_gruvgreen, "-sf", col_black, NULL };
 static const char *termcmd[]  = { "st", NULL };
-static const char *qutecmd[] = { "qutebrowser", NULL };
-static const char *plexcmd[] = { "/home/caleb/Programs/Plexamp-3.5.0.AppImage", NULL };
-static const char *alsacmd[] = { "st", "-e", "alsamixer", NULL };
-static const char *discordcmd[] = { "discord", NULL };
-static const char *ankicmd[] = { "anki", NULL };
-static const char *bitwardencmd[] = { "bitwarden-desktop", NULL };
 
 static Key keys[] = {
 	/* modifier                     key        function        argument */
-	{ MODKEY|ShiftMask,             XK_b,      spawn,          {.v = bitwardencmd } },
-	{ MODKEY,                       XK_n,      spawn,          {.v = ankicmd } },
-	{ MODKEY,  											XK_c,      spawn,          {.v = discordcmd } },
-	{ MODKEY,                       XK_a,      spawn,          {.v = alsacmd } },
-	{ MODKEY,                       XK_x,      spawn,          {.v = plexcmd } },
 	{ MODKEY,                       XK_p,      spawn,          {.v = dmenucmd } },
-	{ MODKEY|ShiftMask,             XK_Return, spawn,          {.v = termcmd } },
-	{ MODKEY,                       XK_q,      spawn,          {.v = qutecmd } },
 	{ MODKEY,                       XK_b,      togglebar,      {0} },
 	{ MODKEY,                       XK_j,      focusstack,     {.i = +1 } },
 	{ MODKEY,                       XK_k,      focusstack,     {.i = -1 } },
@@ -147,6 +134,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_period, focusmon,       {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  tagmon,         {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_period, tagmon,         {.i = +1 } },
+	{ MODKEY|ControlMask,           XK_Left,   viewtoleft,     {0} },
+	{ MODKEY|ControlMask,           XK_Right,  viewtoright,    {0} },
+	{ MODKEY|ShiftMask,             XK_Left,   tagtoleft,      {0} },
+	{ MODKEY|ShiftMask,             XK_Right,  tagtoright,     {0} },
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
 	TAGKEYS(                        XK_3,                      2)
